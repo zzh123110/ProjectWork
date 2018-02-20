@@ -15,7 +15,7 @@ namespace MyTest
             //test to see that it exists
             Assert.IsNotNull(AStaff);
         }
-
+        //staff number
         [TestMethod]
         public void StaffNumberPropertyOK()
         {
@@ -127,6 +127,7 @@ namespace MyTest
             Assert.IsFalse(OK);
         }
 
+        //first name 
         [TestMethod]
         public void FirstNamePropertyOK()
         {
@@ -140,19 +141,20 @@ namespace MyTest
             Assert.IsNotNull(tstFirstName);
         }
 
+        //last name
         [TestMethod]
         public void LastNamePropertyOK()
         {
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //create some test data to assign to the property
-            string tstLastName = "Zihao";
+            string tstLastName = "Zhang";
             //Assign the data to the property
             AStaff.LastName = tstLastName;
             //test to see that the two values are the same
             Assert.IsNotNull(tstLastName);
         }
-
+        //gender
         [TestMethod]
         public void GenderPropertyOK()
         {
@@ -165,7 +167,7 @@ namespace MyTest
             //test to see that the two values are the same
             Assert.IsNotNull(tstGender);
         }
-
+        //position
         [TestMethod]
         public void PositionPropertyOK()
         {
@@ -178,7 +180,7 @@ namespace MyTest
             //test to see that the two values are the same
             Assert.IsNotNull(tstPosition);
         }
-
+        //password
         [TestMethod]
         public void PasswordPropertyOK()
         {
@@ -191,7 +193,7 @@ namespace MyTest
             //test to see that the two values are the same
             Assert.IsNotNull(tstPassword);
         }
-
+        //attendence
         [TestMethod]
         public void AttendencePropertyOK()
         {
@@ -204,7 +206,7 @@ namespace MyTest
             //test to see that the two values are the same
             Assert.IsNotNull(tstAttendence);
         }
-
+        //address
         [TestMethod]
         public void AddressPropertyOK()
         {
@@ -217,7 +219,7 @@ namespace MyTest
             //test to see that the two values are the same
             Assert.IsNotNull(tstAddress);
         }
-
+        //phone number 
         [TestMethod]
         public void PhoneNumberPropertyOK()
         {
@@ -230,7 +232,7 @@ namespace MyTest
             //test to see that the two values are the same
             Assert.IsNotNull(tstPhoneNumber);
         }
-
+        //search method 
         [TestMethod]
         public void SearchMethodOK()
         {
@@ -245,6 +247,170 @@ namespace MyTest
             //test to se that the result is correct
             Assert.IsTrue(Search);
         }
+
+        //test search mothod
+        //staff number search
+        [TestMethod]
+        public void TestStuffNumberSearch()
+        {
+            //create an instance of the class we want to create
+            clsStaff AStaff = new clsStaff();
+            //boolean variable to store the result of the balidation 
+            Boolean Search = false;
+            //boolean variable t oreord if data is ok (assume it is)
+            Boolean OK = true;
+            //create some test data to use with the moethod 
+            string StaffNumber = "P1622604";
+            //invoke the moethod 
+            Search = AStaff.Search(StaffNumber);
+            //check the Stuffnumber
+            if (AStaff.StaffNumber != "P1622604")
+            {
+                OK = false;
+            }
+            //test to se that the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        //first name search 
+        [TestMethod]
+        public void TestFirstNameSearch()
+        {
+            //create an instance of the class we want to create
+            clsStaff AStaff = new clsStaff();
+            //boolean variable to store the result of the balidation 
+            Boolean Search = false;
+            //boolean variable t oreord if data is ok (assume it is)
+            Boolean OK = true;
+            //create some test data to use with the moethod 
+            string StaffNumber = "P1622604";
+            //invoke the moethod 
+            Search = AStaff.Search(StaffNumber);
+            //check the property
+            if (AStaff.FirstName != "Zihao")
+            {
+                OK = false;
+            }
+            //test to se that the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        //last name search 
+        [TestMethod]
+        public void TestLastNameSearch()
+        {
+            //create an instance of the class we want to create
+            clsStaff AStaff = new clsStaff();
+            //boolean variable to store the result of the balidation 
+            Boolean Search = false;
+            //boolean variable t oreord if data is ok (assume it is)
+            Boolean OK = true;
+            //create some test data to use with the moethod 
+            string StaffNumber = "P1622604";
+            //invoke the moethod 
+            Search = AStaff.Search(StaffNumber);
+            //check the property
+            if (AStaff.LastName != "Zhang")
+            {
+                OK = false;
+            }
+            //test to se that the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        //gender search 
+        [TestMethod]
+        public void TesGenderSearch()
+        {
+            //create an instance of the class we want to create
+            clsStaff AStaff = new clsStaff();
+            //boolean variable to store the result of the balidation 
+            Boolean Search = false;
+            //boolean variable t oreord if data is ok (assume it is)
+            Boolean OK = true;
+            //create some test data to use with the moethod 
+            string StaffNumber = "P1622604";
+            //invoke the moethod 
+            Search = AStaff.Search(StaffNumber);
+            //check the property
+            if (AStaff.Gender != "Male")
+            {
+                OK = false;
+            }
+            //test to se that the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        //position search 
+        [TestMethod]
+        public void TestPositionSearch()
+        {
+            //create an instance of the class we want to create
+            clsStaff AStaff = new clsStaff();
+            //boolean variable to store the result of the balidation 
+            Boolean Search = false;
+            //boolean variable t oreord if data is ok (assume it is)
+            Boolean OK = true;
+            //create some test data to use with the moethod 
+            string StaffNumber = "P1622604";
+            //invoke the moethod 
+            Search = AStaff.Search(StaffNumber);
+            //check the property
+            if (AStaff.Position != "Cleaner")
+            {
+                OK = false;
+            }
+            //test to se that the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        //attendence search 
+        [TestMethod]
+        public void TestAttendenceSearch()
+        {
+            //create an instance of the class we want to create
+            clsStaff AStaff = new clsStaff();
+            //boolean variable to store the result of the balidation 
+            Boolean Search = false;
+            //boolean variable t oreord if data is ok (assume it is)
+            Boolean OK = true;
+            //create some test data to use with the moethod 
+            string StaffNumber = "P1622604";
+            //invoke the moethod 
+            Search = AStaff.Search(StaffNumber);
+            //check the property
+            if (AStaff.Attendence != 98.6)
+            {
+                OK = false;
+            }
+            //test to se that the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        //address search 
+        [TestMethod]
+        public void TestAddressSearch()
+        {
+            //create an instance of the class we want to create
+            clsStaff AStaff = new clsStaff();
+            //boolean variable to store the result of the balidation 
+            Boolean Search = false;
+            //boolean variable t oreord if data is ok (assume it is)
+            Boolean OK = true;
+            //create some test data to use with the moethod 
+            string StaffNumber = "P1622604";
+            //invoke the moethod 
+            Search = AStaff.Search(StaffNumber);
+            //check the property
+            if (AStaff.Address != "Leicester")
+            {
+                OK = false;
+            }
+            //test to se that the result is correct
+            Assert.IsTrue(OK);
+        }
+        //end of test search method
+
 
     }
 }

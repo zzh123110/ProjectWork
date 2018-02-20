@@ -52,7 +52,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="tstAddress.cs" />
+    <Compile Include="tstStaffCollection.cs" />
     <Compile Include="tstStaff.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
